@@ -5,7 +5,9 @@ function generateDogs(){
     fetch(url)
     .then(response => response.json())
     .then(responseJson => displayImages(responseJson))
-    .catch(alert('breed not found')); //alert('uh-oh, that was NOT supposed to happen'));
+    .catch(error=> {
+        alert('Breed Not Found');
+    });
 }
 
 
